@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
-    
-	resources :apps
+  root to: 'welcome#index'
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+  resources :apps
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-   root 'welcome_page#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
