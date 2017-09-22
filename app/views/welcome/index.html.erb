@@ -1,2 +1,350 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="banner">
+        <nav class="level">
+            <div class="level-item">
+                <div class="level-left logo" data-open-modal>
+                </div>
+                <h3 class="has-text-white-ter title is-3 padding-left">Hedgehogs</h3>
+            </div>
+            <!-- <div class="column"></div> -->
+            <div class="level-item">
+                <ul class="main-menu ">
+                    <li><a class="is-highlighted" href="">Home</a></li>
+                    <li><a href="">Explore apps</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Support</a></li>
+                </ul>
+            </div>
+            <div class="level-item">
+                <%= link_to "Sign in", new_user_session_path, :class => "button is-primary" %>
+                    <div class="dropdown-menu">
+                        <div class="profile-info">
+                            <img src="img/face5.jpg" alt="">
+                            <h6>Abdo Zam <p>zam@email.com</p></h6>
+                        </div>
+                        <ul>
+                            <li><a href="">View Posts</a></li>
+                            <li><a href="">Manage Groups</a></li>
+                            <li><a href="">Subscription</a></li>
+                            <li><a href="">Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    </div>
+    </nav>
+    <div class="banner-text padding-top">
+        <h2 class="title is-2 has-text-white-ter">A community entirely built for a world with better apps.</h2>
+        <h6 class="title is-6 has-text-white-ter">Whether you're a tester or a developer, your place is here.</h6>
+        <%= link_to "Sign up now", new_user_registration_path, :class => "btn" %>
+    </div>
+    <section class="section is-small beta-tester">
+        <div class="columns is-vcentered">
+            <div class="column is-half">
+                <figure class="image is-256x256">
+                    <%=image_tag("apples.jpg")%>
+                </figure>
+            </div>
+            <div class="column has-text-centered is-desktop is-vcentered">
+                <br>
+                <br>
+                <br>
+                <h3 class="title is-3">Offer your app to the most versatile community of beta testers on the web</h3>
+                <p>Velit nulla minim exercitation do in ut dolore commodo et et elit mollit ut. Mollit est in occaecat consequat consectetur aliqua pariatur excepteur occaecat exercitation eiusmod ut elit consectetur est incididunt. Minim sit qui nostrud duis velit incididunt dolore tempor mollit enim proident eiusmod. Proident officia enim ea elit labore dolor reprehenderit sit in ad sunt enim.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section is-small app-develop">
+        <nav class="columns">
+            <div class="column is-half has-text-centered has-text-weight-normal">
+                <h3 class="title is-3"> Start testing now and compete to earn yourself extraodrinary benefit packages!</h3>
+                <p>Velit nulla minim exercitation do in ut dolore commodo et et elit mollit ut. Mollit est in occaecat consequat consectetur aliqua pariatur excepteur occaecat exercitation eiusmod ut elit consectetur est incididunt. Minim sit qui nostrud duis velit incididunt dolore tempor mollit enim proident eiusmod. Proident officia enim ea elit labore dolor reprehenderit sit in ad sunt enim.
+                </p>
+                <div class="horizontal-cusion-medium display-block cusion-top">
+                    <figure class="image progress-bar left cusion-top">
+                        <%=image_tag("Progress-bar.png")%>
+                    </figure>
+                    <figure class="image progress-bar right">
+                        <%=image_tag("rank-edit.png")%>
+                    </figure>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class="section is-small how-it-works">
+        <h3 class="title is-3 has-text-centered">Most Explored Apps </br></br></h3>
+        <div class="horizontal-cusion-small">
+            <div class="tile is-ancestor">
+                <div class="tile is-4 is-vertical is-parent">
+                    <div class="tile is-child">
+                        <article class="tile is-child box">
+                            <h4 class="title is-4 left no-bottom-margin">Forkout</h4>
+                            <span class="tag is-rounded right">Strategy</span>
+                            <div class="clear"></div>
+                            <figure class="image app-icon is-centered">
+                                <%=image_tag("icons/forkout.png")%>
+                            </figure>
+                            <div class="feedback-box">
+                                <div class="rating-box">
+                                    <figure class="image">
+                                        <%=image_tag("face5.jpg", class: "profile-img")%>
+                                    </figure>
+                                    <div class="details">
+                                    <p class="feedback-name vertical-align margin-auto">Mike Rogers</p>
+                                    <div class="comment-count">
+                                    	<p class="is-size-7"><strong>21</strong></p>
+                                    	<i class="fa fa-commenting"></i>
+                                	</div>
+                                	<div class="thumbs-count">
+                                    	<p class="is-size-7"><strong>13</strong></p>
+                                    	<i class="fa fa-thumbs-up"></i>
+                                	</div>
+                                	</div>
+                                    <div class="starability-result left" data-rating="3" aria-describedby="rated-element">
+                                        3 stars
+                                    </div>
+                                </div>
+                                <div class="comment-box">
+                                    <h6 class="subtitle is-size-5">
+	                            	Laborum sed ut in nulla
+	                            </h6>
+                                    <h6 class="subtitle smaller">
+			          			'Anim ex nisi veniam nulla dolore eiusmod deserunt dolore incididunt consectetur anim ea.'
+			          </h6>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                                        <div class="tile is-child">
+                        <article class="tile is-child box">
+                            <h4 class="title is-4 left no-bottom-margin">LockIO</h4>
+                            <span class="tag is-rounded right">Knowledge</span>
+                            <div class="clear"></div>
+                            <figure class="image app-icon is-centered">
+                                <%=image_tag("icons/lockio.png")%>
+                            </figure>
+                            <div class="feedback-box">
+                                <div class="rating-box">
+                                    <figure class="image">
+                                        <%=image_tag("face5.jpg", class: "profile-img")%>
+                                    </figure>
+                                    <div class="details">
+                                    <p class="feedback-name vertical-align margin-auto">Mike Rogers</p>
+                                    <div class="comment-count">
+                                    	<p class="is-size-7"><strong>21</strong></p>
+                                    	<i class="fa fa-commenting"></i>
+                                	</div>
+                                	<div class="thumbs-count">
+                                    	<p class="is-size-7"><strong>13</strong></p>
+                                    	<i class="fa fa-thumbs-up"></i>
+                                	</div>
+                                	</div>
+                                    <div class="starability-result left" data-rating="3" aria-describedby="rated-element">
+                                        3 stars
+                                    </div>
+                                </div>
+                                <div class="comment-box">
+                                    <h6 class="subtitle is-size-5">
+	                            	Laborum sed ut in nulla
+	                            </h6>
+                                    <h6 class="subtitle smaller">
+			          			'Anim ex nisi veniam nulla dolore eiusmod deserunt dolore incididunt consectetur anim ea.'
+			          </h6>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="tile is-4 is-vertical is-parent">
+                                        <div class="tile is-child">
+                        <article class="tile is-child box">
+                            <h4 class="title is-4 left no-bottom-margin">Qurush</h4>
+                            <span class="tag is-rounded right">Games</span>
+                            <div class="clear"></div>
+                            <figure class="image app-icon is-centered">
+                                <%=image_tag("icons/sidebeep.png")%>
+                            </figure>
+                            <div class="feedback-box">
+                                <div class="rating-box">
+                                    <figure class="image">
+                                        <%=image_tag("face5.jpg", class: "profile-img")%>
+                                    </figure>
+                                    <div class="details">
+                                    <p class="feedback-name vertical-align margin-auto">Mike Rogers</p>
+                                    <div class="comment-count">
+                                    	<p class="is-size-7"><strong>21</strong></p>
+                                    	<i class="fa fa-commenting"></i>
+                                	</div>
+                                	<div class="thumbs-count">
+                                    	<p class="is-size-7"><strong>13</strong></p>
+                                    	<i class="fa fa-thumbs-up"></i>
+                                	</div>
+                                	</div>
+                                    <div class="starability-result left" data-rating="3" aria-describedby="rated-element">
+                                        3 stars
+                                    </div>
+                                </div>
+                                <div class="comment-box">
+                                    <h6 class="subtitle is-size-5">
+	                            	Laborum sed ut in nulla
+	                            </h6>
+                                    <h6 class="subtitle smaller">
+			          			'Anim ex nisi veniam nulla dolore eiusmod deserunt dolore incididunt consectetur anim ea.'
+			          </h6>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                                        <div class="tile is-child">
+                        <article class="tile is-child box">
+                            <h4 class="title is-4 left no-bottom-margin">Qurush</h4>
+                            <span class="tag is-rounded right">Knowledge</span>
+                            <div class="clear"></div>
+                            <figure class="image app-icon is-centered">
+                                <%=image_tag("icons/alisiam.svg")%>
+                            </figure>
+                            <div class="feedback-box">
+                                <div class="rating-box">
+                                    <figure class="image">
+                                        <%=image_tag("face5.jpg", class: "profile-img")%>
+                                    </figure>
+                                    <div class="details">
+                                    <p class="feedback-name vertical-align margin-auto">Mike Rogers</p>
+                                    <div class="comment-count">
+                                    	<p class="is-size-7"><strong>21</strong></p>
+                                    	<i class="fa fa-commenting"></i>
+                                	</div>
+                                	<div class="thumbs-count">
+                                    	<p class="is-size-7"><strong>13</strong></p>
+                                    	<i class="fa fa-thumbs-up"></i>
+                                	</div>
+                                	</div>
+                                    <div class="starability-result left" data-rating="3" aria-describedby="rated-element">
+                                        3 stars
+                                    </div>
+                                </div>
+                                <div class="comment-box">
+                                    <h6 class="subtitle is-size-5">
+	                            	Laborum sed ut in nulla
+	                            </h6>
+                                    <h6 class="subtitle smaller">
+			          			'Anim ex nisi veniam nulla doloLorem ipsum occaecat pariatur proident duis ad dolor cillum elit anim in aliquip nulla cillum magna magna sint.re eiusmod deserunt dolore incididunt consectetur anim ea.'
+			          </h6>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="tile is-4 is-vertical is-parent">
+                                        <div class="tile is-child">
+                        <article class="tile is-child box">
+                            <h4 class="title is-4 left no-bottom-margin">Qurush</h4>
+                            <span class="tag is-rounded right">Knowledge</span>
+                            <div class="clear"></div>
+                            <figure class="image app-icon is-centered">
+                                <%=image_tag("icons/qurush-app.png")%>
+                            </figure>
+                            <div class="feedback-box">
+                                <div class="rating-box">
+                                    <figure class="image">
+                                        <%=image_tag("face5.jpg", class: "profile-img")%>
+                                    </figure>
+                                    <div class="details">
+                                    <p class="feedback-name vertical-align margin-auto">Mike Rogers</p>
+                                    <div class="comment-count">
+                                    	<p class="is-size-7"><strong>21</strong></p>
+                                    	<i class="fa fa-commenting"></i>
+                                	</div>
+                                	<div class="thumbs-count">
+                                    	<p class="is-size-7"><strong>13</strong></p>
+                                    	<i class="fa fa-thumbs-up"></i>
+                                	</div>
+                                	</div>
+                                    <div class="starability-result left" data-rating="3" aria-describedby="rated-element">
+                                        3 stars
+                                    </div>
+                                </div>
+                                <div class="comment-box">
+                                    <h6 class="subtitle is-size-5">
+	                            	Laborum sed ut in nulla
+	                            </h6>
+                                    <h6 class="subtitle smaller">
+			          			'Anim ex nisi veniam nulla DLorem ipsum reprehenderit quis nulla exercitation ut pariatur ut laborum dolore olore nulla pariatur ea ullamco sunt est cillum officia do esse enim ea. Ex proident.'
+			          </h6>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                                        <div class="tile is-child">
+                        <article class="tile is-child box">
+                            <h4 class="title is-4 left no-bottom-margin">Qurush</h4>
+                            <span class="tag is-rounded right">Knowledge</span>
+                            <div class="clear"></div>
+                            <figure class="image app-icon is-centered">
+                                <%=image_tag("icons/alisiam.svg")%>
+                            </figure>
+                            <div class="feedback-box">
+                                <div class="rating-box">
+                                    <figure class="image">
+                                        <%=image_tag("face5.jpg", class: "profile-img")%>
+                                    </figure>
+                                    <div class="details">
+                                    <p class="feedback-name vertical-align margin-auto">Mike Rogers</p>
+                                    <div class="comment-count">
+                                    	<p class="is-size-7"><strong>21</strong></p>
+                                    	<i class="fa fa-commenting"></i>
+                                	</div>
+                                	<div class="thumbs-count">
+                                    	<p class="is-size-7"><strong>13</strong></p>
+                                    	<i class="fa fa-thumbs-up"></i>
+                                	</div>
+                                	</div>
+                                    <div class="starability-result left" data-rating="3" aria-describedby="rated-element">
+                                        3 stars
+                                    </div>
+                                </div>
+                                <div class="comment-box">
+                                    <h6 class="subtitle is-size-5">
+	                            	Laborum sed ut in nulla
+	                            </h6>
+                                    <h6 class="subtitle smaller">
+			          			'Anim ex nisi veniam nulla dolore dolor fugiat elit voluptate proident fugiat ut ad aute dolor.iusmod deserunt dolore incididunt consectetur anim ea.'
+			          </h6>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer class="footer">
+    <div class="container is-small">
+        <div class="content has-text-centered">
+            <p>
+                <strong></strong> by <a href="http://jgthms.com">A. Zamzamy</a>.
+                
+            </p>
+            <p>
+                <a class="icon" href="https://github.com/azamzamy">
+          <i class="fa fa-github"></i>
+        </a>
+            </p>
+        </div>
+
+</html>
