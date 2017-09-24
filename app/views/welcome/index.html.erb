@@ -1,26 +1,20 @@
-<!DOCTYPE html>
-<html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
 </head>
 
 <body>
     <div class="banner">
         <nav class="level">
             <div class="level-item">
-                <div class="level-left logo" data-open-modal>
+                <div class="level-left logo">
                 </div>
-                <h3 class="has-text-white-ter title is-3 padding-left">Hedgehogs</h3>
+                <h3 class="has-text-white-ter title is-3 margin-left">Hedgehogs</h3>
             </div>
             <!-- <div class="column"></div> -->
             <div class="level-item">
                 <ul class="main-menu ">
-                    <li><a class="is-highlighted" href="">Home</a></li>
+                    <li><a href="">Home</a></li>
                     <li><a href="">Explore apps</a></li>
                     <li><a href="">About us</a></li>
                     <li><a href="">Support</a></li>
@@ -28,18 +22,7 @@
             </div>
             <div class="level-item">
                 <%= link_to "Sign in", new_user_session_path, :class => "button is-primary" %>
-                    <div class="dropdown-menu">
-                        <div class="profile-info">
-                            <img src="img/face5.jpg" alt="">
-                            <h6>Abdo Zam <p>zam@email.com</p></h6>
-                        </div>
-                        <ul>
-                            <li><a href="">View Posts</a></li>
-                            <li><a href="">Manage Groups</a></li>
-                            <li><a href="">Subscription</a></li>
-                            <li><a href="">Log Out</a></li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
         </nav>
@@ -51,7 +34,7 @@
         <h6 class="title is-6 has-text-white-ter">Whether you're a tester or a developer, your place is here.</h6>
         <%= link_to "Sign up now", new_user_registration_path, :class => "btn" %>
     </div>
-    <section class="section is-small beta-tester">
+    <section class="section is-medium beta-tester">
         <div class="columns is-vcentered">
             <div class="column is-half">
                 <figure class="image is-256x256">
@@ -68,7 +51,7 @@
             </div>
         </div>
     </section>
-    <section class="section is-small app-develop">
+    <section class="section is-medium app-develop">
         <nav class="columns">
             <div class="column is-half has-text-centered has-text-weight-normal">
                 <h3 class="title is-3"> Start testing now and compete to earn yourself extraodrinary benefit packages!</h3>
@@ -346,5 +329,3 @@
         </a>
             </p>
         </div>
-
-</html>
