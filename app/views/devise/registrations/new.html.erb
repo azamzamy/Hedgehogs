@@ -1,96 +1,122 @@
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <div class="navbar is-dark" role="navigation" aria-label="main navigation">
-        <div class="navbar-start has-text-white-ter">
-            <div class="navbar-item">
-                <%=image_tag("hedgehog.png", class: 'padding-right', width: '50', height: '50')%>
-                    <h4 class="title is-4 has-text-white-ter">Hedgehogs</h4>
-            </div>
-        </div>
-        <div class="navbar-end">
-            <a class="navbar-item has-text-grey-lighter">Home</a>
-            <a class="navbar-item has-text-grey-lighter">Explore Apps</a>
-            <a class="navbar-item has-text-grey-lighter">About us</a>
-            <a class="navbar-item has-text-grey-lighter">Support</a>
-            <div class="navbar-item">
-                <%= link_to "Sign in", new_user_session_path, :class => "button is-primary" %>
-            </div>
+<div class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-start has-text-white-ter">
+        <div class="navbar-item">
+            <%=image_tag("hedgehog.png", class: 'padding-right', width: '50', height: '50')%>
+                <h4 class="title is-4 has-text-white-ter">Hedgehogs</h4>
         </div>
     </div>
-</head>
+    <div class="navbar-end">
+        <a class="navbar-item has-text-grey-lighter">Home</a>
+        <a class="navbar-item has-text-grey-lighter">Explore Apps</a>
+        <a class="navbar-item has-text-grey-lighter">About us</a>
+        <a class="navbar-item has-text-grey-lighter">Support</a>
+        <div class="navbar-item">
+            <%= link_to "Sign in", new_user_session_path, :class => "button is-primary" %>
+        </div>
+    </div>
+</div>
 
 <body>
     <section class="hero is-fullheight is-dark is-bold is-size-6">
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns is-vcentered">
-                    <div class="column is-4 is-offset-4">
-                        <h3 class="title is-3 has-text-centered">
+        <%= form_for (@user) do |f| %>
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column is-4">
+                            <div class="container is-vcentered">
+                            <% if @user.errors.any? %>
+                                <table class="table is-narrow">
+                                    <thead>
+                                            <p>
+                                                Your registration form contains
+                                                <%= pluralize(@user.errors.count, "error") %>.
+                                            </p>
+                                        </thead>
+                                            <tbody>
+                                                <% @user.errors.full_messages.each do |msg| %>
+                                                    <tr>
+                                                        <li><%= msg %></li>
+                                                    </tr>
+                                                    <% end %>
+                                            </tbody>
+                             <% end %>
+                                        </table>
+                                    </div>
+                        </div>
+                        <div class="column is-4 ">
+                            <h3 class="title is-3 has-text-centered">
               Sign up
             </h3>
-                        <div class="box">
-                          <div class="field">
-                            <label class="label">First name</label>
-                            <p class="control">
-                                <input class="input" type="text" placeholder="John">
-                            </p>
-                          </div>
-                          <div class="field">
-                            <label class="label">Last name</label>
-                            <p class="control">
-                                <input class="input" type="text" placeholder="Doe">
-                            </p>
-                          </div> <div class="field">
-                            <label class="label">Email</label>
-                            <p class="control has-icons-left has-icons-right">
-                                <input class="input" type="email" placeholder="Email">
-                                <span class="icon is-small is-left">
-      <i class="fa fa-envelope"></i>
-    </span>
-                            </p> </div>
-                            <div class="field">
-                            <label class="label">Password</label>
-                            <p class="control has-icons-left">
-                                <input class="input" type="password" placeholder="Password">
-                                <span class="icon is-small is-left">
-      <i class="fa fa-lock"></i>
-    </span>
-                            </p> </div><div class="field">
-                            <label class="label">Confirm Password</label>
-                            <p class="control has-icons-left">
-                                <input class="input" type="password" placeholder="Confirm Password">
-                                <span class="icon is-small is-left">
-      <i class="fa fa-lock"></i>
-    </span>
-                            </p> </div>
-                            <div class="field">
-                            <p class="control">
-                                <button class="button is-info">Register</button>
-                                <button class="button is-default">Cancel</button>
-                            </p>
+                            <div class="box">
+                                <div class="field">
+                                    <label class="label">
+                                        First name
+                                    </label>
+                                    <p class="control ">
+                                        
+                                         
+    <%= f.text_field :f_name, class: 'input', autofocus: true, placeholder: 'John' %>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Last name</label>
+                                    <p class="control">
+                                        
+    <%= f.text_field :l_name, class: 'input', placeholder: 'Doe'%>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Email</label>
+
+                                    <p class="control ">
+                                        
+    <%= f.email_field :email, class: 'input', autofocus: true, placeholder: 'johndoe@email.org' %>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <label class="label">
+                                        Password
+                                    </label>
+                                    <p class="control ">
+                                        
+                                            
+    <%= f.password_field :password, class: 'input', autocomplete: "off", placeholder: 'Password' %>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <label class="label">
+                                   Confirm password
+                                    </label>
+                                    <p class="control ">
+                                        <%= f.password_field :password_confirmation, class: 'input', autocomplete: "off", placeholder: 'Confirm password' %>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <p class="control">
+                                        <!-- link_to 'Register', root_path, :onclick => "$('#form_id').submit()", class: 'button is-info'  -->
+                                        <%= f.submit "Register", class: 'button is-info' %>
+                                            <%= link_to("Cancel", root_path, class: 'button is-default')%>
+                                    </p>
+                                </div>
+                                <nav class="level">
+                                    <div class="level-left">
+                                        <div class="level-item">
+                                            <p> Already have an account? </p>
+                                        </div>
+                                    </div>
+                                    <div class="level-right">
+                                        <div class="level-item">
+                                            <p class="">
+                                                <%= link_to "Sign in", new_user_session_path, :class => "button is-primary" %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <% end %>
+                            </div>
                         </div>
-                        <nav class="level">
-                        <div class="level-left">
-                        <div class="level-item">
-                        <p> Already have an acount? </p>
-                      </div>
-                        </div>
-                        <div class="level-right">
-                        <div class="level-item">
-                        <p class="">
-                            <%= link_to "Sign in", new_user_session_path, :class => "button is-primary" %>
-                        </p>
-                      </div>
-                    </div>
-                      </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </section>
+    <%= render "devise/shared/links" %>
 </body>
-
-</html>

@@ -1,26 +1,110 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-start has-text-white-ter">
+            <div class="navbar-item">
+                <%=image_tag("hedgehog.png", class: 'padding-right', width: '50', height: '50')%>
+                    <h4 class="title is-4 has-text-white-ter">Hedgehogs</h4>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <a class="navbar-item has-text-grey-lighter">Home</a>
+            <a class="navbar-item has-text-grey-lighter">Explore Apps</a>
+            <a class="navbar-item has-text-grey-lighter">About us</a>
+            <a class="navbar-item has-text-grey-lighter">Support</a>
+            <div class="navbar-item">
+                <%= link_to "Sign in", new_user_session_path, :class => "button is-primary" %>
+            </div>
+        </div>
     </div>
-  <% end -%>
+<body>
+    <section class="hero is-fullheight is-dark is-bold is-size-6">
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+            <div class="container padding-login">
+                <div class="columns is-vcentered">
+                    <div class="column is-4">
+                            <div class="container is-vcentered">
+                            <% if @user.errors.any? %>
+                                <table class="table is-narrow">
+                                    <thead>
+                                            <p>
+                                                Your registration form contains
+                                                <%= pluralize(@user.errors.count, "error") %>.
+                                            </p>
+                                        </thead>
+                                            <tbody>
+                                                <% @user.errors.full_messages.each do |msg| %>
+                                                    <tr>
+                                                        <li><%= msg %></li>
+                                                    </tr>
+                                                    <% end %>
+                                            </tbody>
+                             <% end %>
+                                        </table>
+                                    </div>
+                        </div>
+                    <div class="column is-4 ">
+                        <h3 class="title is-3 has-text-centered">
+              Sign in
+            </h3>
+            
+                        <div class="box">
+                            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                        <div class="field">
+                                                    
+    
+                            <label class="label"><%= f.label :email %></label>
+                            
+    
+                            <p class="control has-icons-left">
+                                <!-- <input class="input" type="email" placeholder="Email"> -->
+                                <%= f.email_field :email, class: 'input', autofocus: true %>
+                                <span class="icon is-small is-left">
+      <i class="fa fa-envelope"></i>
+    </span>
+                            </p> </div>
+                            <div class="field">
+                                
+    
+                            <label class="label"><%= f.label :password, class: 'label'%></label>
+                            
+                            <p class="control has-icons-left">
+                                <%= f.password_field :password, class: 'input', autocomplete: "off" %>
+                                <!-- <input class="input" type="password" placeholder="Password"> -->
+                                <span class="icon is-small is-left">
+      <i class="fa fa-lock"></i>
+    </span>
+                            </p> </div>
+                            
+                            <div class="field">
+                            <p class="control">
+                                <%= f.submit "Log in", class: 'button is-primary' %>
+                                <%= link_to("Cancel", root_path, class: 'button is-default')%>
 
-<%= render "devise/shared/links" %>
+                            </p>
+                        </div>
+                        <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+                        <hr>
+                        
+                        <nav class="level">
+                        <div class="level-left">
+                        <div class="level-item">
+                        <p> Don't have an acount? </p>
+                      </div>
+                        </div>
+                        <div class="level-right">
+                        <div class="level-item">
+                        <p class="">
+                            <!-- <%= link_to "Sign up", new_user_session_path, :class => "button is-info" %> -->
+                            <%= link_to "Sign up", new_registration_path(resource_name), :class => "button is-info" %>
+                        </p>
+                      </div>
+                    </div>
+                      </nav>
+
+                            <% end %>
+                    </div>
+                </div>
+
+        </div>
+        
+    </section>
+</body>

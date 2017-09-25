@@ -4,64 +4,9 @@
 </head>
 
 <body>
-    <div class="banner">
-    <nav class="navbar is-transparent">
-        <div class="navbar-start has-text-white-ter">
-            <div class="navbar-item">
-                <%=image_tag("hedgehog.png", class: 'padding-right', width: '50', height: '50')%>
-                    <h4 class="title is-4 has-text-white-ter">Hedgehogs</h4>
-            </div>
-        </div>
-        <div class="navbar-end">
-            <a class="navbar-item has-text-grey-lighter">Home</a>
-            <a class="navbar-item has-text-grey-lighter">Explore Apps</a>
-            <a class="navbar-item has-text-grey-lighter">About us</a>
-            <a class="navbar-item has-text-grey-lighter">Support</a>
-            <div class="navbar-item">
-                <%= link_to "Sign in", new_user_session_path, :class => "button is-primary" %>
-            </div>
-        </div>
-        </nav>
-    </div>
-    <div class="banner-text padding-top">
-        <h2 class="title is-2 has-text-white-ter">A community entirely built for a world with better apps.</h2>
-        <h6 class="title is-6 has-text-white-ter">Whether you're a tester or a developer, your place is here.</h6>
-        <%= link_to "Sign up now", new_user_registration_path, :class => "btn" %>
-    </div>
-    <section class="section is-medium beta-tester">
-        <div class="columns is-vcentered">
-            <div class="column is-half">
-                <figure class="image is-256x256">
-                    <%=image_tag("apples.jpg")%>
-                </figure>
-            </div>
-            <div class="column has-text-centered is-desktop is-vcentered">
-                <br>
-                <br>
-                <br>
-                <h3 class="title is-3">Offer your app to the most versatile community of beta testers on the web</h3>
-                <p>Velit nulla minim exercitation do in ut dolore commodo et et elit mollit ut. Mollit est in occaecat consequat consectetur aliqua pariatur excepteur occaecat exercitation eiusmod ut elit consectetur est incididunt. Minim sit qui nostrud duis velit incididunt dolore tempor mollit enim proident eiusmod. Proident officia enim ea elit labore dolor reprehenderit sit in ad sunt enim.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="section is-medium app-develop">
-        <nav class="columns">
-            <div class="column is-half has-text-centered has-text-weight-normal">
-                <h3 class="title is-3"> Start testing now and compete to earn yourself extraodrinary benefit packages!</h3>
-                <p>Velit nulla minim exercitation do in ut dolore commodo et et elit mollit ut. Mollit est in occaecat consequat consectetur aliqua pariatur excepteur occaecat exercitation eiusmod ut elit consectetur est incididunt. Minim sit qui nostrud duis velit incididunt dolore tempor mollit enim proident eiusmod. Proident officia enim ea elit labore dolor reprehenderit sit in ad sunt enim.
-                </p>
-                <div class="horizontal-cusion-medium display-block cusion-top">
-                    <figure class="image progress-bar left cusion-top">
-                        <%=image_tag("Progress-bar.png")%>
-                    </figure>
-                    <figure class="image progress-bar right">
-                        <%=image_tag("rank-edit.png")%>
-                    </figure>
-                </div>
-            </div>
-        </nav>
-    </section>
+
+    <%= render './user_navbar' %>
+    
     <section class="section is-small how-it-works">
         <h3 class="title is-3 has-text-centered">Most Explored Apps </br></br></h3>
         <div class="horizontal-cusion-small">
@@ -323,3 +268,5 @@
         </a>
             </p>
         </div>
+    </div>
+</footer>

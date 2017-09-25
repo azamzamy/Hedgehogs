@@ -174,7 +174,7 @@ $title-color: #ffffff;
 }
 
 .horizontal-cusion-small {
-    padding: 0% 7% 0% 7%;
+    padding: 0% 15%;
 }
 
 .no-bottom-margin {
@@ -196,7 +196,6 @@ $title-color: #ffffff;
 .is-centered {
     justify-content: center;
     text-align: center;
-    display: inline-block;
 }
 
 .app-icon {
@@ -267,7 +266,11 @@ nav.columns {
     padding-top: 10%;
 }
 
-
+.banner{
+    .navbar{
+        background-color:rgba(0, 0, 0, 0);
+    }
+}
 
 
 
@@ -311,9 +314,5 @@ nav.columns {
 	        margin-right: 35px;			
 	        // padding-right: 15px;			
 	}
-
-
-
-
 
 
