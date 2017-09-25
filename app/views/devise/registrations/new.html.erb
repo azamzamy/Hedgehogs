@@ -6,8 +6,10 @@
         </div>
     </div>
     <div class="navbar-end">
-        <a class="navbar-item has-text-grey-lighter">Home</a>
-        <a class="navbar-item has-text-grey-lighter">Explore Apps</a>
+        <a><%= link_to "Home", root_path, class: 'navbar-item has-text-grey-lighter'%>
+        </a>
+        <a class="">
+            <%= link_to "Explore Apps", apps_path, class: 'navbar-item has-text-grey-lighter'%>
         <a class="navbar-item has-text-grey-lighter">About us</a>
         <a class="navbar-item has-text-grey-lighter">Support</a>
         <div class="navbar-item">
@@ -98,6 +100,7 @@
                                             <%= link_to("Cancel", root_path, class: 'button is-default')%>
                                     </p>
                                 </div>
+                                <hr>
                                 <nav class="level">
                                     <div class="level-left">
                                         <div class="level-item">
