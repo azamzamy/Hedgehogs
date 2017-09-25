@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :apps
   resources :users
 
-
   get 'signup/show'
   get 'signup/login'
   post 'signup' => 'signup#signup'
@@ -28,4 +27,3 @@ Rails.application.routes.draw do
 root 'welcome#index'
 
 end
-
