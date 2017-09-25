@@ -14,7 +14,7 @@ class AppsController < ApplicationController
 # u.avatar_identifier # => 'file.png'
 
 def index
-@apps = User.all
+
 	end
 
 def show
@@ -26,3 +26,4 @@ def delete
 	end
 
 end
+

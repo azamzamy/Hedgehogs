@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'welcome#index'
+  
   devise_for :users, controllers: { sessions: 'users/sessions' }
   resources :apps
   resources :users
@@ -24,4 +24,8 @@ Rails.application.routes.draw do
   get 'users/update/:id', to: 'users#update'
   post 'users/update/:id', to: 'users#update'
   patch 'users/update/:id', to:'users#update'  
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+root 'welcome#index'
+
+end
+
