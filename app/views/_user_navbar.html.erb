@@ -1,0 +1,17 @@
+<div class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-start has-text-white-ter">
+        <div class="navbar-item">
+            <%=image_tag("hedgehog.png", class: 'padding-right', width: '50', height: '50')%>
+                <h4 class="title is-4 has-text-white-ter">Hedgehogs</h4>
+        </div>
+    </div>
+    <div class="navbar-end">
+        <a class="navbar-item has-text-grey-lighter">Home</a>
+        <a class="navbar-item has-text-grey-lighter">Explore Apps</a>
+        <a class="navbar-item has-text-grey-lighter">About us</a>
+        <a class="navbar-item has-text-grey-lighter">Support</a>
+        <div class="navbar-item has-text-grey-lighter">
+            <%= render 'devise/menu/login_items'%>
+        </div>
+    </div>
+</div>

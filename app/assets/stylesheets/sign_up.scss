@@ -1,0 +1,44 @@
+
+.navbar-start {
+    // padding: 4px 0px; // height: 80px;
+    // display: block;
+    // float: none;
+}
+
+.navbar-start {
+    .navbar-item>img {
+        display: block;
+        max-height: 100%;
+        max-width: 100%; // margin: 50% 0%;
+    }
+}
+
+
+.logo-nav {
+    margin-left: 10%;
+    max-width: 50px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    background-image: image-url("hedgehog.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.margin-left {
+    margin-left:  40%;
+}
+
+.padding-right {
+    padding-right: 3%;
+}
+
+.auto-margin{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.padding-login {
+    padding-top: 5%;
+}
