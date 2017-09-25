@@ -1,4 +1,4 @@
-<div class="navbar is-dark" role="navigation" aria-label="main navigation">
+<div class="navbar is-dark has-shadow" role="navigation" aria-label="main navigation">
     <div class="navbar-start has-text-white-ter">
         <div class="navbar-item">
             <%=image_tag("hedgehog.png", class: 'padding-right', width: '50', height: '50')%>
@@ -20,7 +20,7 @@
 
 <body>
     <section class="hero is-fullheight is-dark is-bold is-size-6">
-        <%= form_for (@user) do |f| %>
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
             <div class="hero-body">
                 <div class="container">
                     <div class="columns">
@@ -35,6 +35,7 @@
                                             </p>
                                         </thead>
                                             <tbody>
+
                                                 <% @user.errors.full_messages.each do |msg| %>
                                                     <tr>
                                                         <li><%= msg %></li>
@@ -42,7 +43,7 @@
                                                     <% end %>
                                             </tbody>
                              <% end %>
-                                        </table>
+                                        
                                     </div>
                         </div>
                         <div class="column is-4 ">
@@ -60,6 +61,7 @@
     <%= f.text_field :f_name, class: 'input', autofocus: true, placeholder: 'John' %>
                                     </p>
                                 </div>
+
                                 <div class="field">
                                     <label class="label">Last name</label>
                                     <p class="control">
@@ -67,14 +69,13 @@
     <%= f.text_field :l_name, class: 'input', placeholder: 'Doe'%>
                                     </p>
                                 </div>
+
                                 <div class="field">
                                     <label class="label">Email</label>
-
                                     <p class="control ">
-                                        
-    <%= f.email_field :email, class: 'input', autofocus: true, placeholder: 'johndoe@email.org' %>
-                                    </p>
+    <%= f.email_field :email, class: 'input', autofocus: true, placeholder: 'johndoe@email.org' %>                      </p>
                                 </div>
+
                                 <div class="field">
                                     <label class="label">
                                         Password
@@ -85,6 +86,7 @@
     <%= f.password_field :password, class: 'input', autocomplete: "off", placeholder: 'Password' %>
                                     </p>
                                 </div>
+
                                 <div class="field">
                                     <label class="label">
                                    Confirm password
@@ -95,9 +97,11 @@
                                 </div>
                                 <div class="field">
                                     <p class="control">
+    
                                         <!-- link_to 'Register', root_path, :onclick => "$('#form_id').submit()", class: 'button is-info'  -->
                                         <%= f.submit "Register", class: 'button is-info' %>
                                             <%= link_to("Cancel", root_path, class: 'button is-default')%>
+
                                     </p>
                                 </div>
                                 <hr>
@@ -121,5 +125,5 @@
                     </div>
                 </div>
     </section>
-    <%= render "devise/shared/links" %>
+    
 </body>

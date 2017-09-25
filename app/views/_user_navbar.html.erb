@@ -1,4 +1,4 @@
-<div class="navbar is-dark" role="navigation" aria-label="main navigation">
+<div class="navbar is-dark has-shadow" role="navigation" aria-label="main navigation">
     <div class="navbar-start has-text-white-ter">
         <div class="navbar-item">
             <%=image_tag("hedgehog.png", class: 'padding-right', width: '50', height: '50')%>
@@ -6,9 +6,9 @@
         </div>
     </div>
     <div class="navbar-end">
-        <a class="navbar-item has-text-grey-lighter">Home</a>
-        <a class="navbar-item has-text-grey-lighter">Explore Apps</a>
-        <a class="navbar-item has-text-grey-lighter">My Profile</a>
+        <%= link_to 'Home', root_path, class: 'navbar-item has-text-grey-lighter' %>
+        <%= link_to 'Explore Apps', apps_path, class: 'navbar-item has-text-grey-lighter' %>
+        <%= link_to 'My profile', current_user, class: 'navbar-item has-text-grey-lighter' %>
         <div class="navbar-item has-text-grey-lighter">
             <%= render 'devise/menu/login_items'%>
         </div>

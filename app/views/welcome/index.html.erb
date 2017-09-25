@@ -13,10 +13,11 @@
             </div>
         </div>
         <div class="navbar-end">
-            <a class="navbar-item has-text-grey-lighter">Home</a>
-            <a class="navbar-item has-text-grey-lighter">Explore Apps</a>
-            <a class="navbar-item has-text-grey-lighter">About us</a>
-            <a class="navbar-item has-text-grey-lighter">Support</a>
+            <div class="navbar-end">
+        <%= link_to 'Home', root_path, class: 'navbar-item has-text-grey-lighter' %>
+        <%= link_to 'Explore Apps', apps_path, class: 'navbar-item has-text-grey-lighter' %>
+        <a class="navbar-item has-text-grey-lighter">About us</a>
+        <a class="navbar-item has-text-grey-lighter">Support</a>
             <div class="navbar-item">
                 <a><%= link_to "Sign in", new_user_session_path, :class => "button is-primary" %></a>
             </div>
