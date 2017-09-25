@@ -14,9 +14,6 @@ def update_sanitized_params
 end
 
 
-end
-
-
   # GET /resource/sign_up
   # def new
   #   super
