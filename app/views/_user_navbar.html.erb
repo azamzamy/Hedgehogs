@@ -7,10 +7,10 @@
     </div>
     <div class="navbar-end">
         <%= link_to 'Home', root_path, class: 'navbar-item has-text-grey-lighter' %>
-        <%= link_to 'Explore Apps', apps_path, class: 'navbar-item has-text-grey-lighter' %>
-        <%= link_to 'My profile', current_user, class: 'navbar-item has-text-grey-lighter' %>
-        <div class="navbar-item has-text-grey-lighter">
-            <%= render 'devise/menu/login_items'%>
-        </div>
+            <%= link_to 'Explore Apps', apps_path, class: 'navbar-item has-text-grey-lighter' %>
+                <%= link_to 'My profile', current_user, class: 'navbar-item has-text-grey-lighter' %>
+                    <div class="navbar-item has-text-grey-lighter">
+                        <%= render 'devise/menu/login_items'%>
+                    </div>
     </div>
 </div>
