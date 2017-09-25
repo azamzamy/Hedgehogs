@@ -12,4 +12,17 @@ class AppsController < ApplicationController
 # u.avatar.url # => '/url/to/file.png'
 # u.avatar.current_path # => 'path/to/file.png'
 # u.avatar_identifier # => 'file.png'
+
+def index
+@apps = User.all
+	end
+
+def show
+end
+
+def new
+	end
+def delete
+	end
+
 end

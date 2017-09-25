@@ -273,17 +273,13 @@ nav.columns {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
+.navbar-start {
+    .navbar-item>img {
+        display: block;
+        max-height: 100%;
+        max-width: 100%; // margin: 50% 0%;
+    }
+}
 
 
 
