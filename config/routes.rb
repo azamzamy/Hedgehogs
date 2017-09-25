@@ -24,7 +24,8 @@ Rails.application.routes.draw do
   get 'users/update/:id', to: 'users#update'
   post 'users/update/:id', to: 'users#update'
   patch 'users/update/:id', to:'users#update'  
-  
+
 root 'welcome#index'
 
 end
+
