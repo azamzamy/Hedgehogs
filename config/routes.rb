@@ -4,13 +4,13 @@ Rails.application.routes.draw do
   resources :apps
   resources :users
 
-  get 'signup/show'
-  get 'signup/login'
-  post 'signup' => 'signup#signup'
-    get 'signup'  => 'users#new'
-      get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
+  # get 'signup/show'
+  # get 'signup/login'
+  # post 'signup' => 'signup#signup'
+  #   get 'signup'  => 'users#new'
+  #     get    'login'   => 'sessions#new'
+  # post   'login'   => 'sessions#create'
+  # delete 'logout'  => 'sessions#destroy'
   get 'users/edit'
   get 'users/edit/:id', to: 'users#edit'
   post 'users/edit/:id', to: 'users#edit'
