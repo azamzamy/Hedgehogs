@@ -24,6 +24,7 @@ gem 'mini_magick'
 gem "bulma-rails", "~> 0.5.2"
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'jquery-rails'
+gem 'delayed_job_active_record'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
