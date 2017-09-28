@@ -174,7 +174,7 @@ $title-color: #ffffff;
 }
 
 .horizontal-cusion-small {
-    padding: 0% 15%;
+    padding: 0% 9%;
 }
 
 .no-bottom-margin {
@@ -182,11 +182,14 @@ $title-color: #ffffff;
     padding-bottom: 0%;
 }
 
+.box{
+            padding: 4%;
+        }
+
 .tile {
     .subtitle:not(:last-child),
     .title:not(:last-child) {
         margin-bottom: 1%;
-        ;
     }
     .subtitle {
         font-size: small;
@@ -298,7 +301,6 @@ nav.columns {
     border-radius: 15%;
     left: 33%;
     }
-
 
 
 
